@@ -1,0 +1,34 @@
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-color: transparentize(rgb(255, 244, 244), .3);
+    margin: 0 auto;
+    
+    .nav-top {
+        position: relative;
+        // @include text-G-MIX ;
+        width: 100%;
+        height: 100%;
+        @include Flex();
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-items: center;
+       
+        .nav-item {
+            color: darken($linkedin-c, 30%);
+            margin: 0 1rem;
+           
+            &:hover {
+                font-weight: bolder;
+            }
+           
+        }
+        
+    }
+}
+

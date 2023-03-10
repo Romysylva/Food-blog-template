@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css?family=Raleway&displayswap");
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1.3;
+    max-width: 1200px;
+    margin: auto;
+
+  
+   
+}
+
+// VARIABLES
+
+// COLORS
+
+// THEME COLORS
+
+// BASE-COLORS
+
+$prim-c: #111;
+$sec-c: #333;
+$light-c: #fff;
+
+// SOCIAL COLORS
+
+$face-c: #395599;
+$insta-c: #c32f82;
+$tweet-c: #1c9bed;
+$youtube-c: #ff0000;
+$pinterest-c: #d73532;
+$linkedin-c: #4064ad;
+
+// MIXINS
+
+// FLEX MIXINS
+
+@mixin Flex($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin background-p{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin gradient {
+    background: linear-gradient($youtube-c,$tweet-c);
+}
+@mixin text-shadow {
+    text-shadow:        
+    -1px -1px 0 rgb(244, 237, 237), 
+    -2px -2px 0 rgb(220, 209, 209),    
+    -3px -3px 0 rgb(246, 232, 232),   
+    -4px -4px 0 rgb(246, 238, 238),  
+    -5px -5px 0 rgb(227, 213, 213),  
+    -6px -6px 0 firebrick,    
+    -7px -7px 0 firebrick,  
+    -8px -8px 0 firebrick,  
+    -9px -9px 0 firebrick,        
+    -10px -10px 0 firebrick,   
+    -30px 20px 40px rgb(53, 4, 247);
+}
+
+@mixin text-background {
+    background-image: url(/images/fudge-cake-with-sugar-1579926.jpg);
+    background-clip: text;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+@mixin text-G-MIX {
+    position: relative;
+    // transform: translateY(-50%);
+    // -webkit-transform: translateY(-50%);
+    top: 0;
+    font-size: 4rem;
+    // background-image: url(/images/fudge-cake-with-sugar-1579926.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    color: transparent;
+    background-clip: text;
+   
+}
+@mixin animation_right {
+    @keyframes right{
+        0%{
+            background-position: -1000px;
+            left: 10%;
+            opacity: 0;
+        }
+        100%{
+            background-position: 0px;
+            sleft: 0%;
+            opacity: 1;
+        }
+    }
+    animation: right 2s ease forwards;
+    -webkit-animation: right 2s ease forwards;
+    animation-delay: .5s;
+}
+@mixin animation_left {
+    @keyframes left {
+        0%{
+            opacity: 0;
+            top: 100%;
+        }
+        100%{
+            opacity: 1;
+            top: 10%;
+        }
+    }
+    animation: left 8s ease forwards ;
+    -webkit-animation: left 8s ease forwards ;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0.25, 0.5, 5,);
+    transition: cubic-bezier(1.075, 0.82, 0.165, 1);
+    transition: 5s;
+   
+}
+
+// FONTS 
+
+$base-font-s: 16px;
+$sm_font-s: $base-font-s * .8;
+$lg_font-s: $base-font-s * 1.4;
+$xl_font-s: $base-font-s * 1.8;
+$xxl_font-s: $base-font-s * 3;
+
+
+
+// RESPONSIVENESS
+$ipad-pro: 1024px;
+$ipad: 768px;
+$phones: 500px;
+
+
+// MAPS 
+
+$font_size: (
+    'sm': $sm_font-s,
+    'lg': $lg_font-s,
+    'xl': $xl_font-s,
+    'xxl': $xxl_font-s,
+);
+
+@each $size_name, $size_value in $font_size {
+    .text {
+        &-#{$size_name} {
+            font-size: $size_value;
+        }
+    }
+}
+
+$Text-positioning: (
+    'center': center,
+    'right': right,
+);
+
+@each $position_name, $position_value in $Text-positioning {
+    .#{$position_name} {
+        text-align: $position_value;
+    }
+}
+
+@mixin responsive($display) {
+    @media (max-width: $display ) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

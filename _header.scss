@@ -1,0 +1,65 @@
+.header-main {
+    position: relative;
+    background-image: url(/images/header.jpg);
+    @include Flex(column);
+    @include background-p;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 50vh;
+    background-blend-mode: darken;
+    background-color: rgba($pinterest-c,  .5);
+    margin: 0 auto;
+    top: 0;
+    .logo{
+        img{
+            width: 150px;
+            box-shadow: 2px 3px 10px $light-c; 
+            // @include animation_right;
+            @include animation_left;
+            @include text-G-MIX ;
+
+
+        }
+    }
+
+    .header-text {
+
+        h1{
+            @include text-background;
+            @include animation_right;
+            @include text-G-MIX ;
+            word-wrap: break-word;
+
+        }
+        p{
+            @include text-background;
+            @include animation_left;
+            // @include text-G-MIX ;
+
+
+
+    
+        }
+
+        transform: skewY(-5deg);
+        letter-spacing: 4px;
+        // word-spacing: -8px;
+        text-shadow:        
+        -1px -1px 0 rgb(244, 237, 237), 
+        -2px -2px 0 rgb(220, 209, 209),    
+        -3px -3px 0 rgb(246, 232, 232),   
+        -4px -4px 0 rgb(246, 238, 238),  
+        -5px -5px 0 rgb(227, 213, 213),  
+        -6px -6px 0 rgb(250, 101, 15),    
+        -7px -7px 0 rgb(250, 101, 15),  
+        -8px -8px 0 rgb(250, 101, 15),  
+        -9px -9px 0 rgb(250, 101, 15),        
+        -10px -10px 0 rgb(250, 101, 15),   
+        -30px 20px 40px rgb(249, 139, 21);
+        color: transparent;
+
+       
+    }
+   
+}

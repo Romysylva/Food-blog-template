@@ -1,0 +1,172 @@
+.section-footer{
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    @include Flex();
+    justify-content: space-evenly;
+    // flex-wrap: wrap;
+
+
+    .title {
+        margin-bottom: 2rem;
+        font-weight: bolder;
+    }
+
+    .footer {
+
+        width: 300px;
+    }
+
+    .footer_1 {
+        h3 {
+            color: $light-c;
+        }
+        p {
+            a {
+            
+                &:hover {
+                    color: $youtube-c !important;
+                    font-weight: bold;
+                }
+            }
+        }
+        @include Flex(column);
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        @include gradient;
+
+
+        .footer_contact {
+            @include Flex(column);
+
+            a{
+                i{
+                    margin-right: 1rem;
+                    &.fa-phone {
+                    
+                        color: $pinterest-c;
+                    }
+                    &.fa-envelope {
+                        color: $youtube-c;
+                    }
+                    &.fa-home {
+                        color: $insta-c;
+
+                    }
+                }
+            }
+        
+        }
+        &:hover {
+          
+            // background-color: darken( , 10%);
+            color: $light-c;
+
+            i{
+                color: $light-c !important;
+                transition:  ( 1s ease-in-out);
+            }
+        }
+
+    }
+    .footer_2 {
+        &-content {
+            
+            img{
+
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+               
+
+            }           
+            @include Flex(column);
+
+            li {
+                @include Flex();
+                justify-content: space-around;
+                padding: 0.5rem;
+                &:hover {
+                    background: lighten($sec-c, 30%);
+                    cursor: pointer;
+                    color: $light-c;
+                }
+
+
+            }
+        
+        }
+    }
+    .footer_3 {
+        .tags {
+            @include Flex();
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: lighten($sec-c, 60%);
+            span {
+               
+                color: $prim-c;
+                font-weight: bold;
+                cursor: pointer;
+                padding: .2rem;
+                margin: 5px;
+                &:hover {
+                    background: linear-gradient($insta-c, $face-c);
+                    color: $light-c;
+                }
+            }
+        }
+
+        .footer_social{
+            @include Flex();
+            justify-content: space-evenly;
+            margin: 2rem 0;
+
+            a {
+                i {
+                    font-size: 2rem;
+                    color: $sec-c;
+                    &.fa-facebook {
+                        color: $face-c;
+                        transition: transform ( .5s ease-in-out);
+                        &:hover {
+                            transform: translateY(-6px);
+                            color: darken($face-c, 5%);
+}
+                    }
+                    &.fa-instagram {
+                        color: $insta-c;
+                        transition: transform ( .5s ease-in-out);
+                        &:hover {
+                            transform: translateY(-6px);
+                            color: darken($insta-c, 5%);
+                        }
+                    }
+                    &.fa-pinterest {
+                        color: $pinterest-c;
+                        transition: transform ( .5s ease-in-out); 
+                        &:hover {
+                        transform: translateY(-6px);
+                        color: darken($pinterest-c, 10%);
+                            
+                    }
+                    }
+                    &.fa-twitter {
+                        color: $tweet-c;
+                        transition: transform ( .5s ease-in-out); 
+                        &:hover {
+                            transform: translateY(-6px);
+                            
+                            color: darken($tweet-c, 5%);
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+

@@ -1,0 +1,9 @@
+.main_section {
+  margin-top: 100px;
+  width: 100%;
+  @in;
+}
+.main_section img {
+  max-height: 300px;
+  width: 100%;
+}

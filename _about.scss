@@ -1,0 +1,43 @@
+.about-section {
+    position: relative;
+    position: relative;
+    cursor: pointer;
+  
+    h3,
+    h4,
+    h5 {
+        margin: 3rem 0;
+    }
+    img {
+        display: block;
+        height: 550px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+   
+
+    p {
+        margin: 6rem;
+        line-height: 1.5;
+    }
+
+
+
+    .me{
+        border-bottom: 2px solid $linkedin-c;
+
+       
+
+    }
+    #{&}-line{
+        border-bottom: 5px solid $face-c;
+        position: relative;
+        width: 10%;
+        left: 47%;
+
+    }
+
+   
+
+}
